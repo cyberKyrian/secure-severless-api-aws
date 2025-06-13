@@ -49,9 +49,9 @@ This mirrors common risks seen in production APIs and shows how to apply scalabl
 
 ---
 
-## 🔓 Simulated Vulnerabilities
+## Simulated Vulnerabilities
 
-### 🔹 1. No Input Validation (XSS)
+### 1. No Input Validation (XSS)
 
 **Test Input:**
 
@@ -68,7 +68,7 @@ curl "https://.../commentHandler?text=<script>alert('x')</script>"
 
 ---
 
-### 🔹 2. No Rate Limiting (Spam)
+### 2. No Rate Limiting (Spam)
 
 Used a loop to send multiple requests rapidly:
 
@@ -83,9 +83,9 @@ for ($i = 1; $i -le 20; $i++) {
 
 ---
 
-## 🔐 Hardenings Applied
+## Hardenings Applied
 
-### 🔹 1. Input Sanitization
+### 1. Input Sanitization
 
 **Code Improvement:**
 
@@ -101,7 +101,7 @@ const sanitized = input.replace(/[^a-zA-Z0-9 ]/g, '');
 
 ---
 
-### 🔹 2. API Key & Usage Plan Enforcement
+### 2. API Key & Usage Plan Enforcement
 
 **Configuration:**
 
@@ -114,7 +114,7 @@ const sanitized = input.replace(/[^a-zA-Z0-9 ]/g, '');
 
 ---
 
-### 🔹 3. AWS WAF Integration
+### 3. AWS WAF Integration
 
 **Web ACL Rules Enabled:**
 
